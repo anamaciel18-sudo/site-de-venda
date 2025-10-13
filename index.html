@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenisShop - Seu E-commerce de Tênis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">TenisShop</div>
+        <nav>
+            <input type="text" id="campoBusca" placeholder="Buscar produtos...">
+        </nav>
+        <button id="btnCarrinho">
+            🛒 Carrinho (<span id="contadorCarrinho">0</span>)
+        </button>
+    </header>
+
+    <main class="container">
+        <h1>Ofertas do Dia</h1>
+        
+        <section id="listaProdutos" class="produtos-grid">
+            </section>
+
+        <aside id="carrinhoLateral" class="carrinho-oculto">
+            <h2>Seu Carrinho</h2>
+            <ul id="itensCarrinho">
+                </ul>
+            <p class="total">Total: R$ <span id="totalCarrinho">0.00</span></p>
+            <button class="finalizar-compra">Finalizar Compra</button>
+            <button id="fecharCarrinho" class="fechar-carrinho">Fechar</button>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
