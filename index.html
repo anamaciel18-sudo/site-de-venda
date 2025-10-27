@@ -1,39 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TenisShop - Seu E-commerce de Tênis</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Minha Loja de Tênis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="logo">TenisShop</div>
+    <header class="cabecalho">
+        <h1>👟 Sneaker Shop 👟</h1>
         <nav>
-            <input type="text" id="campoBusca" placeholder="Buscar produtos...">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </nav>
-        <button id="btnCarrinho">
-            🛒 Carrinho (<span id="contadorCarrinho">0</span>)
-        </button>
     </header>
 
     <main class="container">
-        <h1>Ofertas do Dia</h1>
-        
-        <section id="listaProdutos" class="produtos-grid">
+        <section id="lista-tenis" class="tenis-grid">
+            
+            <div class="tenis-card" data-id="1">
+                <img src="img/tenis1.jpg" alt="Tênis Modelo Clássico" class="tenis-imagem">
+                <h2 class="tenis-nome">Modelo Clássico Pro</h2>
+                <p class="tenis-preco">R$ 299,90</p>
+                <p class="tenis-descricao">Um tênis atemporal para todas as ocasiões.</p>
+                <button class="btn-comprar">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="tenis-card" data-id="2">
+                <img src="img/tenis2.jpg" alt="Tênis para Corrida Speed" class="tenis-imagem">
+                <h2 class="tenis-nome">Speed Runner 3.0</h2>
+                <p class="tenis-preco">R$ 450,00</p>
+                <p class="tenis-descricao">Leveza e amortecimento para suas corridas.</p>
+                <button class="btn-comprar">Adicionar ao Carrinho</button>
+            </div>
+
             </section>
-
-        <aside id="carrinhoLateral" class="carrinho-oculto">
-            <h2>Seu Carrinho</h2>
-            <ul id="itensCarrinho">
-                </ul>
-            <p class="total">Total: R$ <span id="totalCarrinho">0.00</span></p>
-            <button class="finalizar-compra">Finalizar Compra</button>
-            <button id="fecharCarrinho" class="fechar-carrinho">Fechar</button>
-        </aside>
-
     </main>
+
+    <footer class="rodape">
+        <p>&copy; 2025 Sneaker Shop. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
