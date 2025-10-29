@@ -1,37 +1,26 @@
-// Ação para o botão de compra
 document.addEventListener('DOMContentLoaded', () => {
-    const botoesComprar = document.querySelectorAll('.btn-comprar');
+    const botoesAdicionar = document.querySelectorAll('.add-carrinho');
+    const contadorCarrinho = document.querySelector('header nav a:last-child');
+    let itensNoCarrinho = 0;
 
-    botoesComprar.forEach(button => {
-        button.addEventListener('click', (event) => {
-            // Pega o card do tênis
-            const card = event.target.closest('.tenis-card');
-            const nomeTenis = card.querySelector('.tenis-nome').textContent;
+    botoesAdicionar.forEach(botao => {
+        botao.addEventListener('click', (evento) => {
+            // Previne o comportamento padrão (se estivesse em um formulário)
+            evento.preventDefault();
 
-            // Alerta simples para simular a adição ao carrinho
-            alert(`"${nomeTenis}" adicionado ao carrinho!`);
-            
-            // Você pode adicionar lógica mais complexa aqui, como:
-            // 1. Adicionar o item a um array de carrinho.
-            // 2. Atualizar a contagem de itens no cabeçalho.
-        });
-    });
+            // Lógica para adicionar item
+            itensNoCarrinho++;
+            contadorCarrinho.textContent = `🛒 (${itensNoCarrinho})`;
 
-    // Exemplo de interatividade (mudança de cor ao clicar em um nome)
-    const nomesTenis = document.querySelectorAll('.tenis-nome');
-    nomesTenis.forEach(nome => {
-        nome.addEventListener('click', () => {
-            // Alterna uma classe CSS ao clicar no nome
-            nome.classList.toggle('highlight');
+            // Opcional: Feedback visual
+            alert("Produto adicionado ao carrinho!");
+
+            // Opcional: Você pode pegar os dados do tênis
+            const produtoDiv = botao.closest('.produto');
+            const nomeProduto = produtoDiv.getAttribute('data-nome');
+            const precoProduto = produtoDiv.getAttribute('data-preco');
+
+            console.log(`Adicionado: ${nomeProduto} - R$ ${precoProduto}`);
         });
     });
 });
-
-// Adicione esta classe no seu CSS para o efeito de highlight:
-/*
-.highlight {
-    color: #ffc107 !important;
-    text-decoration: underline;
-    cursor: pointer;
-}
-*/

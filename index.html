@@ -1,49 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Loja de Tênis</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>👟 TênisMania - Sua Loja de Tênis Online</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header class="cabecalho">
-        <h1>👟 Sneaker Shop 👟</h1>
+    <header>
+        <h1>TênisMania</h1>
         <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+            <a href="#">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#">Contato</a>
+            <a href="#">🛒 (0)</a>
         </nav>
     </header>
 
-    <main class="container">
-        <section id="lista-tenis" class="tenis-grid">
-            
-            <div class="tenis-card" data-id="1">
-                <img src="img/tenis1.jpg" alt="Tênis Modelo Clássico" class="tenis-imagem">
-                <h2 class="tenis-nome">Modelo Clássico Pro</h2>
-                <p class="tenis-preco">R$ 299,90</p>
-                <p class="tenis-descricao">Um tênis atemporal para todas as ocasiões.</p>
-                <button class="btn-comprar">Adicionar ao Carrinho</button>
-            </div>
+    <main>
+        <section id="banner">
+            <h2>Novidades Chegando!</h2>
+            <p>Os modelos mais estilosos e confortáveis estão aqui.</p>
+            <a href="#produtos" class="btn">Ver Coleção</a>
+        </section>
 
-            <div class="tenis-card" data-id="2">
-                <img src="img/tenis2.jpg" alt="Tênis para Corrida Speed" class="tenis-imagem">
-                <h2 class="tenis-nome">Speed Runner 3.0</h2>
-                <p class="tenis-preco">R$ 450,00</p>
-                <p class="tenis-descricao">Leveza e amortecimento para suas corridas.</p>
-                <button class="btn-comprar">Adicionar ao Carrinho</button>
-            </div>
+        <section id="produtos" class="container">
+            <h2>🔥 Destaques da Semana</h2>
+            <div class="lista-produtos">
+                <div class="produto" data-nome="Air Flex" data-preco="399.90">
+                    <img src="imagem/419eGQ-1chL._AC_SY900_.jpg" alt="Tênis Modelo Air Flex">
+                    <h3>Air Flex Pro</h3>
+                    <p class="preco">R$ 399,90</p>
+                    <button class="add-carrinho">Adicionar ao Carrinho</button>
+                </div>
 
-            </section>
+<div class="produto" data-nome="" data-preco="249.50">
+                    <img src="imagem/tenis-feminino-para-caminhada-ultra-leve-calcado-tenis-feminino-009-loja-modestia-cinzarosa-33-184994_800x.webp" alt="Tênis Modelo Classic Runner">
+                    <h3>Classic Runner</h3>
+                    <p class="preco">R$ 249,50</p>
+                    <button class="
+                </div>
+
+ <div class="produto" data-nome="t" data-preco="249.50">
+                    <img src="imagem/D_NQ_NP_927632-MLB73774923422_012024-O.webp" alt="Tênis Modelo Classic Runner">
+                    <h3>Classic Runner</h3>
+                    <p class="preco">R$ 249,50</p>
+                    <button class="add-carrinho">Adicionar ao Carrinho</button>
+                </div>
+
+                </div>
+        </section>
     </main>
 
-    <footer class="rodape">
-        <p>&copy; 2025 Sneaker Shop. Todos os direitos reservados.</p>
+    <footer>
+        <p>&copy; 2025 TênisMania. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

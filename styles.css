@@ -3,139 +3,144 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
 }
 
 body {
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Cabeçalho */
-.cabecalho {
-    background-color: #222;
+header {
+    background-color: #000;
     color: white;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.cabecalho h1 {
-    font-size: 1.8rem;
+header h1 {
+    font-size: 1.8em;
 }
 
-.cabecalho nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.cabecalho nav ul li a {
+header nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    display: block;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.cabecalho nav ul li a:hover {
+header nav a:hover {
     background-color: #555;
 }
 
-/* Container Principal */
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+/* Banner */
+#banner {
+    background: url('caminho/para/banner-fundo.jpg') no-repeat center center/cover;
+    background-color: #ff4500; /* Cor de fallback */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
 }
 
-/* Grid de Tênis */
-.tenis-grid {
-    display: grid;
-    /* Define 3 colunas, mas ajusta para telas menores */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+#banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Produtos */
+#produtos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff4500;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-    padding-top: 20px;
+    justify-content: center;
 }
 
-/* Card Individual de Tênis */
-.tenis-card {
+.produto {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
+    width: 300px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-.tenis-card:hover {
+.produto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.tenis-imagem {
-    max-width: 100%;
+.produto img {
+    width: 100%;
     height: auto;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
-.tenis-nome {
-    font-size: 1.5rem;
+    border-radius: 5px;
     margin-bottom: 10px;
-    color: #007bff; /* Uma cor de destaque */
 }
 
-.tenis-preco {
-    font-size: 1.2rem;
-    color: #e94e77; /* Outra cor de destaque */
+.produto h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.produto .preco {
+    color: #ff4500;
     font-weight: bold;
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-.tenis-descricao {
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    color: #666;
-    height: 40px; /* Para manter a altura consistente */
-    overflow: hidden;
-}
-
-.btn-comprar {
-    background-color: #007bff;
+.produto .add-carrinho {
+    background-color: #000;
     color: white;
     border: none;
     padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.btn-comprar:hover {
-    background-color: #0056b3;
+.produto .add-carrinho:hover {
+    background-color: #ff4500;
 }
 
 /* Rodapé */
-.rodape {
+footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 15px 0;
-    margin-top: 40px;
-}
-
-/* Responsividade (Ajustes para telas menores) */
-@media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-        text-align: center;
-    }
-    .cabecalho nav ul {
-        margin-top: 10px;
-    }
+    margin-top: 50px;
 }
